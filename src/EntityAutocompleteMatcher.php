@@ -41,7 +41,7 @@ class EntityAutocompleteMatcher extends \Drupal\Core\Entity\EntityAutocompleteMa
             $status = ($entity->isPublished()) ? ", Published" : ", Unpublished";
           }
 
-          $key = $label . ' (' . $entity_id . ')';
+          $key = $label;
           // Strip things like starting/trailing white spaces, line breaks and tags.
           $key = preg_replace('/\s\s+/', ' ', str_replace("\n", '', trim(Html::decodeEntities(strip_tags($key)))));
           // Names containing commas or quotes must be wrapped in quotes.
